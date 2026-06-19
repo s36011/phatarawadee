@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #ff9ecf, #ff69b4, #ffc0cb, #ffb6c1);
+    background-size: 400% 400%;
+    animation: bgMove 8s ease infinite;
+    color: #333;
+}
+
+/* พื้นหลังเคลื่อนไหว */
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    background: linear-gradient(90deg, #ff69b4, #ff1493);
+    color: white;
+    padding: 35px 0;
+    text-align: center;
+    animation: fadeDown 1s ease;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+section {
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+    animation: fadeUp 1s ease;
+    transition: all 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(255, 20, 147, 0.6);
+}
+
+/* กล่องผลงานสัตวแพทย์ (ธีมชมพูเข้ม/น้ำเงินการแพทย์) */
+.projectvet {
+    background: #fff5f8;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border-left: 5px solid #ff1493;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* กล่องผลงานทั่วไป */
+.project {
+    background: #fff;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border-left: 5px solid #ff9ecf;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #fff0f5;
+    margin: 8px 0;
+    padding: 12px;
+    border-left: 5px solid #ff1493;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #555;
+    background: rgba(255, 255, 255, 0.8);
+    margin-top: 40px;
+}
+
+footer a {
+    color: #ff1493;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* แอนิเมชันเลื่อนลงสำหรับ Header */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* แอนิเมชันเลื่อนขึ้นสำหรับ Section */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
